@@ -5,8 +5,10 @@
 
 -- ▽Docs
 ---- https://prestodb.io/docs/current/functions/datetime.html
+---- https://prestodb.io/docs/current/language/types.html
 ---- https://docs.treasuredata.com/display/public/PD/Supported+Presto+and+TD+Functions
 --------------------------------------------------------------------------------------------
+
 
 SELECT
   current_timezone() as current_timezone
