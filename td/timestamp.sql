@@ -31,10 +31,18 @@ SELECT
  ,td_date_trunc('month',1640962800,'JST') as td_udf_round_month
  ,td_date_trunc('year',1640962800,'JST')  as td_udf_round_year
  --format
- ,td_time_format(1640962800, 'HH', 'JST')  as td_udf_format_hh
- ,td_time_format(1640962800, 'dd', 'JST')  as td_udf_format_dd
+ ,td_time_format(1640962800, 'HH', 'JST')  as td_udf_format_year
+ ,td_time_format(1640962800, 'dd', 'JST')  as td_udf_format_hh
  ,td_time_format(1640962800, 'MM', 'JST')  as td_udf_format_mm
  ,td_time_format(1640962800, 'yyyy', 'JST')  as td_udf_format_yyyy
+
+--▽FirebaseEventTimestamp
+,event_timestamp
+,substr(cast(event_timestamp as VARCHAR), 1, 10) as fbase_time_trans1
+,td_time_format((event_timestamp/1000000), 'yyyy-MM-dd HH:mm:ss', 'JST') as fbase_time_trans2
+,td_time_format((event_timestamp/1000000), 'yyyy-MM-dd', 'JST') as fbase_time_trans3
+,td_time_format(cast(substr(cast(event_timestamp as VARCHAR), 1, 10) as INTEGER), 'yyyy-MM-dd HH:mm:ss', 'JST') as  as fbase_time_trans4
+,td_time_format(cast(substr(cast(event_timestamp as VARCHAR), 1, 10) as INTEGER), 'yyyy-MM-dd', 'JST') as  as fbase_time_trans5
 
 
 FROM your_database.your_schema.your_table
