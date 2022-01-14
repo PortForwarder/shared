@@ -5,11 +5,10 @@
 --------------------------------------------------------------------------------------------
 
 
-
 WITH q as (
  SELECT
 	case 
-		when regexp_like(td_ip_to_least_specific_subdivision_name(web.td_ip),'(.+)')  then td_ip_to_least_specific_subdivision_name(web.td_ip)
+    when regexp_like(td_ip_to_least_specific_subdivision_name(web.td_ip),'(.+)')  then td_ip_to_least_specific_subdivision_name(web.td_ip)
 			else 'unknown' end as td_specific_subdivision_name
 			FROM your_database.your_web_access_table as web
 			)
@@ -116,4 +115,3 @@ SELECT
     when regexp_like(td_specific_subdivision_name,'Okinawa')  then '九州・沖縄地方'
       else 'unknown' end as td_specific_subdivision_name_8regions
 FROM q
-
