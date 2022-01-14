@@ -116,3 +116,4 @@ SELECT
     when regexp_like(td_specific_subdivision_name,'Okinawa')  then '九州・沖縄地方'
       else 'unknown' end as td_specific_subdivision_name_8regions
 FROM q
+
