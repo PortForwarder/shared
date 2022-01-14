@@ -1,11 +1,21 @@
 --------------------------------------------------------------------------------------------
 -- ▽Reference
+---- https://docs.treasuredata.com/display/public/PD/Supported+Presto+and+TD+Functions
 ---- https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E3%81%AE%E5%9C%B0%E5%9F%9F
 --------------------------------------------------------------------------------------------
 
 
+WITH q as (
+ SELECT
+	case 
+		when regexp_like(td_ip_to_least_specific_subdivision_name(web.td_ip),'(.+)')  then td_ip_to_least_specific_subdivision_name(web.td_ip)
+			else 'unknown' end as td_specific_subdivision_name
+			FROM your_database.your_web_access_table as web
+			)
+
 SELECT
- case
+  td_specific_subdivision_name
+ ,case
     when regexp_like(td_specific_subdivision_name,'Hokkaido')  then '北海道'
     when regexp_like(td_specific_subdivision_name,'Aomori')  then '青森県'
     when regexp_like(td_specific_subdivision_name,'Iwate')  then '岩手県'
@@ -53,7 +63,7 @@ SELECT
     when regexp_like(td_specific_subdivision_name,'Miyazaki')  then '宮崎県'
     when regexp_like(td_specific_subdivision_name,'Kagoshima')  then '鹿児島県'
     when regexp_like(td_specific_subdivision_name,'Okinawa')  then '沖縄県'
-      else '' end as td_specific_subdivision_name_prefectures
+      else 'unknown' end as td_specific_subdivision_name_prefectures
 
  ,case
     when regexp_like(td_specific_subdivision_name,'Hokkaido')  then '北海道地方'
@@ -103,6 +113,5 @@ SELECT
     when regexp_like(td_specific_subdivision_name,'Miyazaki')  then '九州・沖縄地方'
     when regexp_like(td_specific_subdivision_name,'Kagoshima')  then '九州・沖縄地方'
     when regexp_like(td_specific_subdivision_name,'Okinawa')  then '九州・沖縄地方'
-      else '' end as td_specific_subdivision_name_8regions
-      
-FROM your_database.your_schema.your_table
+      else 'unknown' end as td_specific_subdivision_name_8regions
+FROM q
