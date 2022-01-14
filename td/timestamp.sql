@@ -31,8 +31,8 @@ SELECT
  ,td_date_trunc('month',1640962800,'JST') as td_udf_round_month
  ,td_date_trunc('year',1640962800,'JST')  as td_udf_round_year
  --format
- ,td_time_format(1640962800, 'HH', 'JST')  as td_udf_format_year
- ,td_time_format(1640962800, 'dd', 'JST')  as td_udf_format_hh
+ ,td_time_format(1640962800, 'HH', 'JST')  as td_udf_format_hh
+ ,td_time_format(1640962800, 'dd', 'JST')  as td_udf_format_dd
  ,td_time_format(1640962800, 'MM', 'JST')  as td_udf_format_mm
  ,td_time_format(1640962800, 'yyyy', 'JST')  as td_udf_format_yyyy
 
