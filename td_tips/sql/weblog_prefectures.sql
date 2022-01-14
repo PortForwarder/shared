@@ -7,7 +7,7 @@
 
 WITH q as (
  SELECT
-	case 
+  case 
     when regexp_like(td_ip_to_least_specific_subdivision_name(web.td_ip),'(.+)')  then td_ip_to_least_specific_subdivision_name(web.td_ip)
 			else 'unknown' end as td_specific_subdivision_name
 			FROM your_database.your_web_access_table as web
