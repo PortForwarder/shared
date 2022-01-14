@@ -15,14 +15,14 @@ SELECT
  
 --▽Unixtime >> Date
  ,td_time_format(1640962800, 'yyyy-MM-dd HH:mm:ss', 'JST') as td_udf_date
- ,date_format(from_unixtime(1640962800, 'Asia/Tokyo'), '%Y-%m-%d %H:%i:%s') as presto_udf_date
+ ,date_format(from_unixtime(1640962800, 'Asia/Tokyo'), '%Y-%m-%d %H:%i:%s') as presto_date
 
 --▽TimeZone(A>>B)
- ,timestamp '2022-1-01 00:00 UTC' at time zone 'Asia/Tokyo' as presto_udf_timezone_trans
+ ,timestamp '2022-1-01 00:00 UTC' at time zone 'Asia/Tokyo' as presto_timezone_trans
 
 --▽Date >> Unixtime
  ,td_time_parse('2022-1-01 00:00', 'JST') as td_udf_unix_timezone
- ,to_unixtime(cast('2022-1-01 00:00' as timestamp)) as presto_udf_unix_timezone
+ ,to_unixtime(cast('2022-1-01 00:00' as timestamp)) as presto_unix_timezone
 
 --▽Round
  --trunc
@@ -35,6 +35,7 @@ SELECT
  ,td_time_format(1640962800, 'dd', 'JST')  as td_udf_format_dd
  ,td_time_format(1640962800, 'MM', 'JST')  as td_udf_format_mm
  ,td_time_format(1640962800, 'yyyy', 'JST')  as td_udf_format_yyyy
+
 
 --▽FirebaseEventTimestamp
 ,event_timestamp
