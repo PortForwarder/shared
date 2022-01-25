@@ -9,13 +9,15 @@ pythonライブラリのパッケージに含まれるものを使ってデー�
 - Rdatasets一式 ： [vincentarelbundockさん](https://github.com/vincentarelbundock "https://github.com/vincentarelbundock")が纏めてくれているもの、感謝してつかうべし
   - [https://github.com/vincentarelbundock/Rdatasets>>](https://github.com/vincentarelbundock/Rdatasets "https://github.com/vincentarelbundock/Rdatasets")
 
-# 展開ファイル
-本リポジトリに格納しているものは以下の基準で出力し保存している。
+# 補足：本リポジトリに格納しているものは以下の基準で出力し保存している。
 - pythonの描画ライブラリであるseabornや統計ライブラリのstatsmodelsから出力したものを一部加工して出力（感謝）
 - ファイル末尾のsuffixの意味は以下。
   - _std >> 標準化済み(展開の都合上カテゴリカル変数もone-hot表現の上、標準化)
   - _minmax >> 正規化済み
 - データ構造は配列ではなくテーブル形式 / 文字コードはutf-8です。
+
+# データセット内容
+- affairs.csv : 不倫の有無のデータ 
 
 尚、URLダイレクトな読み込みは git の負荷軽減の為、ダウンロードして使うことを推奨しています。
 とにかく前処理無しにすぐ使いたいという方は是非ご利用ください。特徴量をチューニングしている訳ではないので動作検証等に使うことを目的にしています。
