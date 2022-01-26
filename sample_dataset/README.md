@@ -7,7 +7,7 @@ pythonライブラリのパッケージに含まれるものを使ってデー�
   - [generatedata.com>>](https://generatedata.com/ "generatedata.com")
   - [mockaroo.com>>](https://www.mockaroo.com/ "mockaroo.com")
 - Rdatasets一式 ： [vincentarelbundockさん](https://github.com/vincentarelbundock "https://github.com/vincentarelbundock")が纏めてくれているもの、感謝してつかうべし
-  - [https://github.com/vincentarelbundock/Rdatasets>>](https://github.com/vincentarelbundock/Rdatasets "https://github.com/vincentarelbundock/Rdatasets")
+  - [Available datasets>>](https://vincentarelbundock.github.io/Rdatasets/articles/data.html "https://vincentarelbundock.github.io/Rdatasets/articles/data.html")
 
 # 補足：本リポジトリに格納しているものは以下の基準で出力し保存している。
 - pythonの描画ライブラリであるseabornや統計ライブラリのstatsmodelsから出力したものを一部加工して出力（感謝）
