@@ -9,7 +9,9 @@ pythonライブラリのパッケージに含まれるものを使ってデー�
 - Rdatasets一式 ： [vincentarelbundockさん](https://github.com/vincentarelbundock "https://github.com/vincentarelbundock")が纏めてくれているもの、感謝してつかうべし
   - [Available datasets>>](https://vincentarelbundock.github.io/Rdatasets/articles/data.html "https://vincentarelbundock.github.io/Rdatasets/articles/data.html")
 
-# 補足：本リポジトリに格納しているものは以下の基準で出力し保存している。
+# 補足
+本リポジトリに格納しているものは以下の基準で出力し保存している。
+
 - pythonの描画ライブラリであるseabornや統計ライブラリのstatsmodelsから出力したものを一部加工して出力（感謝）
 - ファイル末尾のsuffixの意味は以下。
   - _std >> 標準化済み(展開の都合上カテゴリカル変数もone-hot表現の上、標準化)
