@@ -1,3 +1,7 @@
+#--------------------------------------------------------------------------------------------
+#-- Japanese Holidays Master
+#--------------------------------------------------------------------------------------------
+
 import csv
 import numpy as np
 import pandas as pd
@@ -9,4 +13,5 @@ df = pd.read_csv('https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv', enco
 redf = df.rename(columns={\
                   '国民の祝日・休日月日': 'time_holiday',\
                   '国民の祝日・休日名称': 'time_holiday_name'})
+
 redf.to_csv('japanese_holidays_gojp.csv', encoding = 'utf-8', index = False)
