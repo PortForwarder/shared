@@ -9,6 +9,12 @@ pythonライブラリのパッケージに含まれるものを使ってデー�
 - Rdatasets一式 ： [vincentarelbundockさん](https://github.com/vincentarelbundock "https://github.com/vincentarelbundock")が纏めてくれているもの、感謝してつかうべし
   - [Available datasets>>](https://vincentarelbundock.github.io/Rdatasets/articles/data.html "https://vincentarelbundock.github.io/Rdatasets/articles/data.html")
 
+
+# データセット内容
+- affairs.csv : 不倫の有無と特徴量のデータセット、目的の変数を2値に加工したカラムはsuffiに _tf を付与。
+- esoph.csv : 食道がんのデータセット。
+
+
 # 補足
 本リポジトリに格納しているものは以下の基準で出力し保存している。
 
@@ -22,9 +28,6 @@ pythonライブラリのパッケージに含まれるものを使ってデー�
 とにかく前処理無しにすぐ使いたいという方は是非ご利用ください。特徴量をチューニングしている訳ではないので動作検証等に使うことを目的にしています。
 
 
-# データセット内容
-- affairs.csv : 不倫の有無と特徴量のデータセット、目的の変数を2値に加工したカラムはsuffiに _tf を付与。
-- esoph.csv : 食道がんのデータセット。
 
 
 
