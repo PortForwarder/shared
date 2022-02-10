@@ -16,8 +16,8 @@ TableauDesktopでTreasure Data CDPに接続する。
  	- https://trino.io/docs/current/installation/jdbc.html
 
 # Tableauの設定
-1.データに接続 >> Presto を選択　※Prestoがない場合は「データに接続 >> その他 >> Presto等にある。
-1.Windowが表れるので以下の用に記入して接続する。
+1. データに接続 >> Presto を選択　※Prestoがない場合は「データに接続 >> その他 >> Presto等にある。
+1. Windowが表れるので以下の用に記入して接続する。
 
 - サーバー： api-presto.treasuredata.co.jp　OR  api-presto.treasuredata.com ※利用しているリージョンを選択
 - ポート： 443
