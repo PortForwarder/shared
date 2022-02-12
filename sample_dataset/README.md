@@ -12,10 +12,13 @@
 
 # データセット内容
 本レポジトリに格納してあるもの。
-- esoph.csv：食道がんのデータセット。
-- breast.csv：乳がんのデータセット
-- caith.csv：スコットランドのケイスネスの人々の目と髪の色による相互分類に関するデータ。表側が目の色/表頭が髪の色の集計値、元データはRのMASSパッケージ、コレスポンデンス分析等に。
-- concrete.csv：[コンクリートの強度](https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength "https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength")のデータ。
+- 回帰・分類用
+  - esoph.csv：食道がんのデータセット。
+  - breast.csv：乳がんのデータセット
+  - concrete.csv：[コンクリートの強度](https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength "https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength")のデータ。strengthという目的変数とその他の説明変数のセット。
+- その他
+  - caith.csv：スコットランドのケイスネスの人々の目と髪の色による相互分類に関するデータ。表側が目の色/表頭が髪の色の集計値、元データはRのMASSパッケージ、コレスポンデンス分析等に。
+
 
 
 # 補足
@@ -26,8 +29,7 @@
   - _minmax >> 正規化済み
 - データ構造は配列ではなくテーブル形式 / 文字コードはutf-8 / BOM無しデータです。
 
-尚、URLダイレクトな読み込みは git の負荷軽減の為、ダウンロードして使うことを推奨しています。
-とにかく前処理無しにすぐ使いたいという方は是非ご利用ください。特徴量をチューニングしている訳ではないので動作検証等に使うことを目的にしています。
+元ファイルの形式が大文字カラム・空白ありになっていたりしたものを、一部整形しています。とにかく前処理無しにすぐ使いたいという方は是非ご利用ください。特徴量をチューニングしている訳ではないので動作検証等に使うことを目的にしています。
 
 
 
