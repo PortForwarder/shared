@@ -12,9 +12,11 @@
 
 # データセット内容
 本レポジトリに格納してあるもの。
-- esoph.csv : 食道がんのデータセット。ID単位の粒度ではなく集計値のデータ。
-- breast.csv : 乳がんのデータセット
+- esoph.csv：食道がんのデータセット。
+- breast.csv：乳がんのデータセット
 - caith.csv：スコットランドのケイスネスの人々の目と髪の色による相互分類に関するデータ。表側が目の色/表頭が髪の色の集計値、元データはRのMASSパッケージ、コレスポンデンス分析等に。
+- concrete.csv：[コンクリートの強度](https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength "https://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength")のデータ。
+
 
 # 補足
 本リポジトリに格納しているものは以下の基準で出力し保存している。
