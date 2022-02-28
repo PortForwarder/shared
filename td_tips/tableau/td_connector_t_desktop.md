@@ -26,6 +26,9 @@ TableauDesktopでTreasure Data CDPに接続する。
 - ユーザー名： Treasure Data CDP で発行されるAPIキー ※取り扱い注意
 - SSLが必要のチェックをONにする
 
+![tableau_presto_api](https://user-images.githubusercontent.com/61743001/155908611-dafac332-13d5-43a2-8062-a2db80233e52.jpg)
+
+
 以上でアクセス完了です。
 
 参考)
