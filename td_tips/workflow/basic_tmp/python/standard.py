@@ -19,7 +19,7 @@ from sklearn.metrics import accuracy_score, recall_score, confusion_matrix ,prec
 import lightgbm as lgb
 
 import pytd
-def preprocessing(database_name, table_name):  
+def preprocessing():  
     client = pytd.Client(apikey = os.environ["TD_API_KEY"]\
                         ,endpoint='https://api.treasuredata.co.jp'\
                         ,default_engine='presto'
