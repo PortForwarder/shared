@@ -1,1 +1,1 @@
-
+your sql command…
