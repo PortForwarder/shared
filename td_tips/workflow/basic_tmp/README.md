@@ -4,6 +4,7 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
 - YAMLにおけるインデントは半角スペースです(Visual Studio Codeではタブが半角スペースに変換される)
 - 各サービスの認証情報(SecretKey等)はTDコンソールより”Secret情報”として登録し変数として呼び出します(ベタ貼り禁止)
 - 標準パラメーター(export/local/store)のうち優先されるのはlocalパラメーターです。[参考リンク>>](https://docs.digdag.io/concepts.html?highlight=export#export-and-store-parameters)
+- customscript内で立ち上がるDockerに関しては右記エイリアスを参照 [参考リンク>>](https://hub.docker.com/r/digdag/digdag-python/tags)
 
 
 # ドキュメント
