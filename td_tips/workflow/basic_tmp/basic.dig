@@ -1,0 +1,35 @@
+timezone: "Asia/Tokyo"
+
+_export:
+  td:
+    database: your_database_name
+
+schedule:
+  daily>: 00:00:00
+
++ran_sql:
+  td>: sql/standard.sql
+
++drop:
+  td_ddl>:
+  drop_tables:
+    - your_table_name_1
+    - your_table_name_2
+
++create_table:
+    +l1_weblog:
+      td>: sql/standard_1.sql
+      create_table: your_dbname.your_tablename_1
+    +l1_app:
+      td>: sql/standard_2.sql
+      create_table: your_dbname.your_tablename_2
+
++python_preprocessing:
+  py>: python.standard.preprocessing
+  database_name: your_database_name
+  table_name: your_table_name
+  docker:
+    image: "digdag/digdag-python:3.9"
+  _env:
+    TD_API_KEY: ${secret:td.apikey}
+    TD_API_SERVER: ${secret:td.apiserver}
