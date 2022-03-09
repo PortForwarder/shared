@@ -52,7 +52,7 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
 # pythonライブラリ
 customscript内では裏側でDockerが立ち上がっていますが、[エイリアス>>](https://hub.docker.com/r/digdag/digdag-python/tags)に存在する「digdag/digdag-python」を確認すれば構成内容を確認できる。例えばpip listすればpythonにインストールしているライブラリが確認できる。(執筆時点ではscikit-learn,lightgbm等88のライブラリが確認できました)
 
->>python:3.9  pip list
+>python:3.9  pip list
 
 | Package               | Version   |
 |-----------------------|-----------|
