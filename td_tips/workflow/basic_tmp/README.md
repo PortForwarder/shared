@@ -1,7 +1,7 @@
 Treasure Data上でWorkflowを実行するBasicテンプレートです。
 
 # 前提
-- YAMLにおけるインデントは半角スペースです(Visual Studio Codeではタブが半角スペースに変換される)
+- YAMLにおけるインデントは半角スペースです(Visual Studio Codeではタブが半角スペースに変換されるのでタブ派にはおすすめ)
 - 各サービスの認証情報(SecretKey等)はTDコンソールより”Secret情報”として登録し変数として呼び出します(ベタ貼り禁止)
 - 標準パラメーター(export/local/store)のうち優先されるのはlocalパラメーターです。[参考リンク>>](https://docs.digdag.io/concepts.html?highlight=export#export-and-store-parameters)
 
@@ -49,8 +49,8 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
 [参考リンク>>](https://docs.digdag.io/workflow_definition.html#using-variables)
 
 
-# python組み込みライブラリ
-customscript内では裏側でDockerが立ち上がっていますが、[エイリアス>>](https://hub.docker.com/r/digdag/digdag-python/tags)に存在する「digdag/digdag-python」をpip listすれば確認することができる(執筆時点ではscikit-learn,lightgbm等88のライブラリが確認できました)
+# pythonライブラリ
+customscript内では裏側でDockerが立ち上がっていますが、[エイリアス>>](https://hub.docker.com/r/digdag/digdag-python/tags)に存在する「digdag/digdag-python」を確認すれば構成内容を確認できる。例えばpip listすればpythonにインストールしているライブラリが確認できる。(執筆時点ではscikit-learn,lightgbm等88のライブラリが確認できました)
 
 >>python:3.9  pip list
 
