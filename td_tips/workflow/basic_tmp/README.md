@@ -4,8 +4,6 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
 - YAMLにおけるインデントは半角スペースです(Visual Studio Codeではタブが半角スペースに変換される)
 - 各サービスの認証情報(SecretKey等)はTDコンソールより”Secret情報”として登録し変数として呼び出します(ベタ貼り禁止)
 - 標準パラメーター(export/local/store)のうち優先されるのはlocalパラメーターです。[参考リンク>>](https://docs.digdag.io/concepts.html?highlight=export#export-and-store-parameters)
-- customscript内で立ち上がるDockerに関しては右記エイリアスを参照 [参考リンク>>](https://hub.docker.com/r/digdag/digdag-python/tags)
-
 
 # ドキュメント
 詳しくは下記のDocsを参照。CLIからの操作はtoolbeltをインストールして実行してください。
@@ -50,3 +48,99 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
 
 [参考リンク>>](https://docs.digdag.io/workflow_definition.html#using-variables)
 
+
+# python組み込みライブラリ
+customscript内では裏側でDockerが立ち上がっていますが、[エイリアス>>](https://hub.docker.com/r/digdag/digdag-python/tags)に存在する「digdag/digdag-python」をpip listすれば確認することができる(執筆時点ではscikit-learn,lightgbm等88のライブラリが確認できました)
+
+>>python:3.9  pip list
+
+| Package               | Version   |
+|-----------------------|-----------|
+| alembic               | 1.5.8     |
+| attrs                 | 20.3.0    |
+| boto3                 | 1.15.18   |
+| botocore              | 1.18.18   |
+| certifi               | 2020.12.5 |
+| chardet               | 4.0.0     |
+| click                 | 7.1.2     |
+| cliff                 | 3.5.0     |
+| cloudpickle           | 1.6.0     |
+| cmaes                 | 0.8.2     |
+| cmd2                  | 1.5.0     |
+| cmdstanpy             | 0.9.5     |
+| colorama              | 0.4.4     |
+| colorlog              | 4.8.0     |
+| convertdate           | 2.2.0     |
+| cycler                | 0.10.0    |
+| Cython                | 0.29.22   |
+| decorator             | 4.4.2     |
+| ephem                 | 3.7.7.1   |
+| fbprophet             | 0.7.1     |
+| future                | 0.18.2    |
+| futures               | 3.1.1     |
+| greenlet              | 1.0.0     |
+| holidays              | 0.10.4    |
+| hyperopt              | 0.2.5     |
+| idna                  | 2.1       |
+| iniconfig             | 1.1.1     |
+| jmespath              | 0.10.0    |
+| joblib                | 1.0.1     |
+| kiwisolver            | 1.3.1     |
+| korean-lunar-calendar | 0.2.1     |
+| lightgbm              | 3.2.0     |
+| LunarCalendar         | 0.0.9     |
+| Mako                  | 1.1.4     |
+| MarkupSafe            | 1.1.1     |
+| matplotlib            | 3.4.1     |
+| memory-profiler       | 0.58.0    |
+| msgpack               | 1.0.2     |
+| networkx              | 2.5.1     |
+| nltk                  | 3.5       |
+| numpy                 | 1.20.2    |
+| optuna                | 2.7.0     |
+| packaging             | 20.9      |
+| pandas                | 1.2.3     |
+| pbr                   | 5.5.1     |
+| Pillow                | 8.2.0     |
+| pip                   | 22.0.2    |
+| plotly                | 4.14.3    |
+| pluggy                | 0.13.1    |
+| presto-python-client  | 0.7.0     |
+| prettytable           | 0.7.2     |
+| psutil                | 5.8.0     |
+| py                    | 1.10.0    |
+| py4j                  | 0.10.9    |
+| pyarrow               | 3.0.0     |
+| PyMeeus               | 0.5.11    |
+| pyparsing             | 2.4.7     |
+| pyperclip             | 1.8.2     |
+| pyspark               | 3.1.1     |
+| pystan                | 2.19.1.1  |
+| pytd                  | 1.4.0     |
+| pytest                | 6.2.3     |
+| python-dateutil       | 2.8.1     |
+| python-editor         | 1.0.4     |
+| pytz                  | 2019.3    |
+| PyYAML                | 5.4.1     |
+| regex                 | 2021.4.4  |
+| requests              | 2.25.1    |
+| retrying              | 1.3.3     |
+| s3transfer            | 0.3.6     |
+| scikit-learn          | 0.24.1    |
+| scipy                 | 1.6.2     |
+| seaborn               | 0.11.1    |
+| setuptools            | 58.1.0    |
+| setuptools-git        | 1.2       |
+| simplejson            | 3.17.2    |
+| six                   | 1.15.0    |
+| SQLAlchemy            | 1.4.5     |
+| stevedore             | 3.3.0     |
+| td-client             | 1.2.1     |
+| td-pyspark            | 21.3.0    |
+| td-pyspark-ea         | 20.12.0   |
+| threadpoolctl         | 2.1.0     |
+| toml                  | 0.10.2    |
+| tqdm                  | 4.60.0    |
+| urllib3               | 1.24.3    |
+| wcwidth               | 0.2.5     |
+| wheel                 | 0.37.1    |
