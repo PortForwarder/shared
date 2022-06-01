@@ -33,3 +33,28 @@ TableauDesktopでTreasure Data CDPに接続する。
 
 参考)
 https://docs.treasuredata.com/display/public/INT/Tableau+Desktop+for+Mac
+
+# Tableauの設定(datatankの場合)
+treasuredataではpostgresqlベースのdatatankというDWHも提供提供しています(アクセス情報はサポートまでご確認ください)
+Tableauへの接続は以下のようにして行います。
+
+1. データに接続 >> PostgreSQL を選択　
+1. Windowが表れるので必要事項を記入して接続する。
+
+
+- サーバー： 発行されたサーバーの場所  　例 18.123.456.789
+- ポート： 5432
+- データベース：datatank
+- 認証：ユーザー名とパスワード
+- ユーザー名：発行されたユーザー名
+- パスワード：発行されたパスワード
+※SSLが必要のチェックをONにする
+
+![tank](https://user-images.githubusercontent.com/61743001/171306847-ee31bc21-3b8e-4d09-a628-28e5e33f28e3.jpg)
+
+※最新のTableauにはインストールと同時にPostgreSQLのDriverがパッケージされていますので新たに入れ直す必要はありませんが、必要に応じて公式サイトからもDLLすることが可能です。
+https://jdbc.postgresql.org/download.html
+
+良いTableauライフを:)
+
+
