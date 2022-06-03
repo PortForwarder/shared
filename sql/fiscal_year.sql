@@ -1,0 +1,14 @@
+--------------------------------------------------------------------------------------------
+-- 会計年度を算出するTips  ※yourdateの部分を書き換えてください。
+-- dateformat = yyyy-mm-dd 
+-- 検証環境：presto
+-- 想定決算月＝3月
+---- 戻り値のINTが1-3の場合、当年−1年を算出、それ以外は当年を出力
+--------------------------------------------------------------------------------------------
+
+
+--- 戻り値がINTで良い場合
+,IF((CAST(substr(yourdate,6,2) as INTEGER) < 4),(CAST(substr(yourdate,1,4) as INTEGER) - 1),(CAST(substr(yourdate,1,4) as INTEGER)))
+
+--- 戻り値を文字列にして年n月期とする場合
+,CAST(IF((CAST(substr(yourdate,6,2) as INTEGER) < 4),(CAST(substr(yourdate,1,4) as INTEGER) - 1),(CAST(substr(yourdate,1,4) as INTEGER))) as VARCHAR) || '年3月期'
