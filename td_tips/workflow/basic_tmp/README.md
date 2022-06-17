@@ -1,10 +1,11 @@
 Treasure Data上でWorkflowを実行するBasicテンプレートです。
 
 # 前提
-- YAMLにおけるインデントは半角スペースです(Visual Studio Codeではタブが半角スペースに変換されるのでタブ派にはおすすめ)
+- 設定ファイルの拡張子は.dig でYAML形式です。インデントは半角スペース。VS CodeでSyntax Highlightが可能なプラグインが配布されています。
+  - https://marketplace.visualstudio.com/items?itemName=msysyamamoto.vscode-digdag 
 - 各サービスの認証情報(SecretKey等)はTDコンソールより”Secret情報”として登録し変数として呼び出します(ベタ貼り禁止)
 - 標準パラメーター(export/local/store)のうち優先されるのはlocalパラメーターです。[参考リンク>>](https://docs.digdag.io/concepts.html?highlight=export#export-and-store-parameters)
-- DockerのRAM/Storageには制限があるため、メモリに乗り切らない処理は別のパイプラインを考えましょう(上位プランもあります)、OSは言わずもがなですがLinuxとなっています。
+- DockerのRAM/Storageには制限があるため、RAMに乗り切らない処理は別のパイプラインを考えましょう(上位プランもあります)、OSは言わずもがなですがLinuxとなっています。
 
 
 # ドキュメント
@@ -16,7 +17,7 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
 - https://toolbelt.treasuredata.com/
 
 # 組み込み変数
-変数は ${var} で利用できます。また以下のように標準の組み込み変数を${session_id}といった記述を用い利用することが出来ます。
+ユーザー定義変数は _export:内で宣言し ${YourVarName} で呼び出すことができます。また以下のように標準の組み込み変数を ${session_id} といった記述を用い利用することが出来ます。組み込み関数は以下。
 
 | Name                 | Description                           | Example                              |
 |----------------------|---------------------------------------|--------------------------------------|
@@ -52,7 +53,7 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
 
 
 # pythonライブラリ
-customscript内では裏側でDockerが立ち上がっていますが、[エイリアス>>](https://hub.docker.com/r/digdag/digdag-python/tags)に存在する「digdag/digdag-python」を確認すれば構成内容を確認できる。例えばpip listすればpythonにインストールしているライブラリが確認が可能。(執筆時点ではscikit-learn,lightgbm等88のライブラリが確認できました)
+customscript内では裏側でDockerが立ち上がっていますが、[エイリアス>>](https://hub.docker.com/r/digdag/digdag-python/tags)に存在する「digdag/digdag-python」を確認すれば構成内容を確認できる。例えばpip listすればpythonにインストールしているライブラリが確認が可能。(執筆時点ではscikit-learn,lightgbm等88のライブラリが確認できました)。
 
 >python:3.9  pip list
 
