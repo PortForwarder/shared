@@ -3,6 +3,8 @@ timezone: "Asia/Tokyo"
 _export:
   td:
     database: your_database_name
+  origin_ver1: value1
+  origin_ver2: value2
 
 schedule:
   daily>: 00:00:00
