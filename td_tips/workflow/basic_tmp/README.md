@@ -14,7 +14,6 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
   - .digファイル内で、参照しているファイル(.sql)ファイルなどを開く
     - 別タブで開く： リンクのPathを選択しながら Shift ＋ Click
     - 同一ウインドウで移動： リンクのPathを選択しながら　Command(Control) ＋ Click
-- .digファイル内で、参照しているファイル(.sql)ファイルなどを別タブで開く： リンクのPathを選択しながらShift ＋ Click
 # ドキュメント
 詳しくは下記のDocsを参照。CLIからの操作はtoolbeltをインストールして実行してください。
 - https://docs.treasuredata.com/display/public/PD/Product+Documentation+Home
