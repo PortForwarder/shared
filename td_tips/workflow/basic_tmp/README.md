@@ -152,8 +152,8 @@ customscript内では裏側でDockerが立ち上がっていますが、[エイ�
 
 ライブラリが存在しない場合、アップデートしたい場合は.pyファイル内でアップデートすることができます。
  
- ` ` `
-import os, sys
+```:pip_install.py
+import os,
 os.system(f"{sys.executable} -m pip install --user -U scikit-learn==0.24.2")
 os.system(f"{sys.executable} -m pip install --upgrade scikit-learn==0.24.2")
- ` ` `
+```
