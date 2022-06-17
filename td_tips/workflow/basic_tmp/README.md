@@ -17,7 +17,7 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
 - https://toolbelt.treasuredata.com/
 
 # ユーザー定義変数と組み込み変数
-ユーザー定義変数は _export:内で宣言し ${YourVarName} で呼び出すことができます。また以下のように標準の組み込み変数(built-in variables)を ${session_id} といった記述を用い利用することが出来ます。組み込み関数は以下。
+ユーザー定義変数は _export:内で宣言し `${YourVarName}` で呼び出すことができます。また以下のように標準の組み込み変数(built-in variables)を `${session_id}` といった記述を用い利用することが出来ます。組み込み関数は以下。
 
 | Name                 | Description                           | Example                              |
 |----------------------|---------------------------------------|--------------------------------------|
