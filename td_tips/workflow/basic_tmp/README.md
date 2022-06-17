@@ -1,6 +1,6 @@
 Treasure Data上でWorkflowを実行するBasicテンプレートです。
 
-# 前提
+# 前提知識
 - 設定ファイルの拡張子は.dig で記述ルールはYAML形式です。インデントは半角スペース。VS CodeでSyntax Highlightが可能なプラグインが配布されています。
   - https://marketplace.visualstudio.com/items?itemName=msysyamamoto.vscode-digdag 
 - 各サービスの認証情報(SecretKey等)はTDコンソールより”Secret情報”として登録し変数として呼び出します(ベタ貼り禁止)
@@ -8,7 +8,8 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
   - YAML内で呼び出す： ["TD_API_KEY"] 
 - 標準パラメーター(export/local/store)のうち優先されるのはlocalパラメーターです。[参考リンク>>](https://docs.digdag.io/concepts.html?highlight=export#export-and-store-parameters)
 - DockerのRAM/Storageには制限があるため、RAMに乗り切らない処理は別のパイプラインを考えましょう(上位プランもあります)、OSは言わずもがなですがLinuxとなっています。
-
+- Webコンソール上の各種WorkflowファイルではショートカットCommandが利用できます。
+  - コメントアウトの有効・解除： Command(Control) ＋ / 
 
 # ドキュメント
 詳しくは下記のDocsを参照。CLIからの操作はtoolbeltをインストールして実行してください。
