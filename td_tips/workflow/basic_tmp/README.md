@@ -1,7 +1,7 @@
 Treasure Data上でWorkflowを実行するBasicテンプレートです。
 
 # 前提
-- 設定ファイルの拡張子は.dig でYAML形式です。インデントは半角スペース。VS CodeでSyntax Highlightが可能なプラグインが配布されています。
+- 設定ファイルの拡張子は.dig で記述ルールはYAML形式です。インデントは半角スペース。VS CodeでSyntax Highlightが可能なプラグインが配布されています。
   - https://marketplace.visualstudio.com/items?itemName=msysyamamoto.vscode-digdag 
 - 各サービスの認証情報(SecretKey等)はTDコンソールより”Secret情報”として登録し変数として呼び出します(ベタ貼り禁止)
 - 標準パラメーター(export/local/store)のうち優先されるのはlocalパラメーターです。[参考リンク>>](https://docs.digdag.io/concepts.html?highlight=export#export-and-store-parameters)
