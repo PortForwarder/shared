@@ -84,10 +84,8 @@ when (age >= 65) and (gender = 'female') then '14:女性65歳以上'
   
 
 --StandardMarketingFrame(FMCT)
-when (age <= 12) and (gender = 'male') then '01:C層(男女12歳以下)'
-when (age <= 19) and (gender = 'male') then '02:T層(男女13-19)'
-when (age <= 12) and (gender = 'female') then '01:C層(男女12歳以下)'
-when (age <= 19) and (gender = 'female') then '02:T層(男女13-19)'
+when (age <= 12) then '01:C層(男女12歳以下)'
+when (age <= 19) then '02:T層(男女13-19歳)'
 when (age <= 34) and (gender = 'male') then '03:M1層(男性20-34歳)'
 when (age <= 49) and (gender = 'male') then '04:M2層(男性35-49歳)'
 when (age <= 64) and (gender = 'male') then '05:M3層(男性50-64歳)'
