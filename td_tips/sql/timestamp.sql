@@ -21,8 +21,8 @@ SELECT
  ,timestamp '2022-1-01 00:00 UTC' at time zone 'Asia/Tokyo' as presto_timezone_trans
 
 --▽Date >> Unixtime
- ,td_time_parse('2022-1-01 00:00', 'JST') as td_udf_unix_timezone
- ,to_unixtime(cast('2022-1-01 00:00' as timestamp)) as presto_unix_timezone
+ ,td_time_parse('2022-01-01 00:00', 'JST') as td_udf_unix_timezone
+ ,to_unixtime(cast('2022-01-01 00:00' as timestamp)) as presto_unix_timezone
 
 --▽Round
  --trunc
