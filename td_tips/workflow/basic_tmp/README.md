@@ -176,10 +176,10 @@ customscript内では裏側でDockerが立ち上がっていますが、[エイ�
 | wcwidth               | 0.2.5     |
 | wheel                 | 0.37.1    |
 
-ライブラリが存在しない場合、アップデートしたい場合は.pyファイル内でアップデートすることができます。
+ライブラリが存在しない場合、存在するがアップデートしたい場合は.pyファイル内でアップデートすることができます。
  
 ```:pip_install.py
-import os,
-os.system(f"{sys.executable} -m pip install --user -U scikit-learn==0.24.2")
+import os
+os.system(f"{sys.executable} -m pip install --user scikit-learn==0.24.2")
 os.system(f"{sys.executable} -m pip install --upgrade scikit-learn==0.24.2")
 ```
