@@ -23,6 +23,10 @@ SELECT
 --▽Date >> Unixtime
  ,td_time_parse('2022-01-01 00:00', 'JST') as td_udf_unix_timezone
  ,to_unixtime(cast('2022-01-01 00:00' as timestamp)) as presto_unix_timezone
+ ,to_unixtime(cast('2022-01-01 00:00' as timestamp))-(9*60*60) as presto_unix_timezone_jst
+
+
+
 
 --▽Round
  --trunc
