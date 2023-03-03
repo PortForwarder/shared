@@ -16,6 +16,9 @@ Treasure Data上でWorkflowを実行するBasicテンプレートです。
     - 同一ウインドウで移動： リンクのPathを選択しながら　Command(Control) ＋ Click
 # ドキュメント
 詳しくは下記のDocsを参照。CLIからの操作はtoolbeltをインストールして実行してください。
+digdagはOSSで公開されており、TD Workflowエンジンにも組み込まれていますが、一部TD CDP独自のオペレーターなどが存在します。
+
+- https://www.digdag.io/
 - https://docs.treasuredata.com/display/public/PD/Product+Documentation+Home
 - https://docs.digdag.io/operators/td_ddl.html
 - https://pytd-doc.readthedocs.io/en/latest/generated/pytd.Client.html
