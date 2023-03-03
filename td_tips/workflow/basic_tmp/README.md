@@ -184,5 +184,6 @@ os.system(f"{sys.executable} -m pip install --user scikit-learn==0.24.2")
 os.system(f"{sys.executable} -m pip install --upgrade scikit-learn==0.24.2")
 ```
 
-またセキュリティの観点から立ち上がっているDockerLinux上で sudo でログインすることはできません。ユーザー権限で内で実行できるScriptでしたら一般的な
-OSと同様に操作することが可能です。 
+※セキュリティの観点から立ち上がっているDockerLinux上で sudo でログインすることはできません。ユーザー権限で内で実行できるScriptでしたら一般的なOSと同様に操作することが可能です。
+
+※メモリ・ストレージ領域ともに契約内容によって異なりますので、スペックに見合ったパイプラインを心がけましょう。
