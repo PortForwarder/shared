@@ -19,12 +19,12 @@ SELECT
 
 
 --▽Unixtime >> String Date (td udf)
-,td_time_string(1641008135, 'y!', 'jst') as result_timestamp  -- >> 2022
-,td_time_string(1641008135, 'M!', 'jst') as result_timestamp  -- >> 2022-01
-,td_time_string(1641008135, 'd!', 'jst') as result_timestamp  -- >> 2022-01-01
-,td_time_string(1641008135, 'h!', 'jst') as result_timestamp_date  -- >> 2022-01-01 12
-,td_time_string(1641008135, 'm!', 'jst') as result_timestamp_date  -- >> 2022-01-01 12:35
-,td_time_string(1641008135, 's!', 'jst') as result_timestamp_date  -- >> 2022-01-01 12:35:35
+,td_time_string(1641008135, 'y!', 'jst') as td_udf_str_timestamp_y  -- >> 2022
+,td_time_string(1641008135, 'M!', 'jst') as td_udf_str_timestamp_month  -- >> 2022-01
+,td_time_string(1641008135, 'd!', 'jst') as td_udf_str_timestamp_day  -- >> 2022-01-01
+,td_time_string(1641008135, 'h!', 'jst') as td_udf_str_timestamp_hour  -- >> 2022-01-01 12
+,td_time_string(1641008135, 'm!', 'jst') as td_udf_str_timestamp_minutes  -- >> 2022-01-01 12:35
+,td_time_string(1641008135, 's!', 'jst') as td_udf_str_timestamp_second  -- >> 2022-01-01 12:35:35
 
 
 --▽TimeZone(A>>B)
