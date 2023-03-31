@@ -17,15 +17,24 @@ SELECT
  ,td_time_format(1640962800, 'yyyy-MM-dd HH:mm:ss', 'JST') as td_udf_date
  ,date_format(from_unixtime(1640962800, 'Asia/Tokyo'), '%Y-%m-%d %H:%i:%s') as presto_date
 
+
+--▽Unixtime >> String Date (td udf)
+,td_time_string(1641008135, 'y!', 'jst') as result_timestamp  -- >> 2022
+,td_time_string(1641008135, 'M!', 'jst') as result_timestamp  -- >> 2022-01
+,td_time_string(1641008135, 'd!', 'jst') as result_timestamp  -- >> 2022-01-01
+,td_time_string(1641008135, 'h!', 'jst') as result_timestamp_date  -- >> 2022-01-01 12
+,td_time_string(1641008135, 'm!', 'jst') as result_timestamp_date  -- >> 2022-01-01 12:35
+,td_time_string(1641008135, 's!', 'jst') as result_timestamp_date  -- >> 2022-01-01 12:35:35
+
+
 --▽TimeZone(A>>B)
  ,timestamp '2022-1-01 00:00 UTC' at time zone 'Asia/Tokyo' as presto_timezone_trans
+
 
 --▽Date >> Unixtime
  ,td_time_parse('2022-01-01 00:00', 'JST') as td_udf_unix_timezone
  ,to_unixtime(cast('2022-01-01 00:00' as timestamp)) as presto_unix_timezone
  ,to_unixtime(cast('2022-01-01 00:00' as timestamp))-(9*60*60) as presto_unix_timezone_jst
-
-
 
 
 --▽Round
