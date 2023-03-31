@@ -59,7 +59,8 @@ SELECT
 ,td_time_format(cast(substr(cast(event_timestamp as VARCHAR), 1, 10) as INTEGER), 'yyyy-MM-dd', 'JST') as  as fbase_time_trans5
 
 
-FROM your_database.your_schema.your_table
+FROM your_database.your_table
+
 WHERE 1=1
 --▽TD:Unixtime >> Date & Between
   AND td_time_range(unixtime,NULL,'yyyy-MM-dd','JST')
@@ -70,3 +71,5 @@ WHERE 1=1
   --AND cast(yourtimestamp as timestamp) between
         --cast('2021-01-01 00:00:00' as timestamp) and
         --cast('2021-01-10 00:00:00' as timestamp) 
+--   and time >= (to_unixtime(cast((cast(date_format(current_date,'%Y-%m-01') as timestamp) - interval '1' month) as timestamp)))-(9*60*60)
+--   and time >= td_time_parse((substr(cast((cast(date_format(current_date,'%Y-%m-01') as timestamp) - interval '1' month)as varchar),1,10)), 'jst')
