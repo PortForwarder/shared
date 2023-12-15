@@ -2,7 +2,6 @@
 サンプルデータについてpythonライブラリのパッケージに含まれるものを使うと「それっぽい変数が用意されており」種類も豊富で手っ取り早い。このデータは英語名表記のカラム名の為、そのまま入力データとしてアルゴリズムに組み込めたり、プロットしても凡例が豆腐(＝文字化け)することがないのがメリットである。日本語カラム名撲滅。
 
 # 参考リンク
-- 当方ブログ記事を参照 ： [SampleDataSet>>](https://qword.me/python/sample-data "SampleDataSet")
 - ジェネレーター ： 
   - [generatedata.com>>](https://generatedata.com/ "generatedata.com")
   - [mockaroo.com>>](https://www.mockaroo.com/ "mockaroo.com")
